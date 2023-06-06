@@ -25,6 +25,7 @@
         </dependency>
     </dependencies>
 
+
     <profiles>
         <profile>
             <id>native</id>
@@ -48,9 +49,11 @@
                             <imageName>native.bin</imageName>
                             <mainClass>org.example.Main</mainClass>
                             <skipNativeTests>true</skipNativeTests>
+                            <verbose>true</verbose>
                             <buildArgs>
-                                <buildArg>--no-fallback</buildArg>
                                 <buildArg>--report-unsupported-elements-at-runtime</buildArg>
+                                <buildArg>-H:+ReportExceptionStackTraces</buildArg>
+                                <buildArg>--static</buildArg>
                             </buildArgs>
                         </configuration>
                     </plugin>
